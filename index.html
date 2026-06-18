@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <!-- Font file imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modern-normalize.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>DESKTOP VIEW</h1>
+    </header>
+
+    <!-- <nav>
+    <ul>
+        <li><a href="#employments"></a></li>
+        <li><a href="#projects"></a></li>
+    </ul>
+</nav> -->
+
+    <main class="site-layout">
+
+        <aside class="sidebar-left">
+            <div class="profile-container">
+                <svg class="circular-text" viewBox="0 0 200 200">
+                    <path id="circlePath" d=" 
+                    M 100, 100 
+                    m 100, 0 
+                    a 100 100 0 1 0 -200,0 
+                    a 100 100 0 1 0 200 0" fill="transparent" />
+                    <text text-anchor="middle">
+                        <textPath href="#circlePath" startOffset="50%">
+                            Available for work
+                        </textPath>
+                    </text>
+                </svg>
+                <!-- <span>Available for Work</span> -->
+                <div class="profile-image">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="cat image profile">
+                </div>
+            </div>
+
+            <h1>MEOW MEOW M. MEOW Junior</h1>
+
+            <h2>Fullstack developer trainee</h2>
+
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since 1966, when designers at
+                Letraset and James Mosley, the librarian at St Bride Printing
+            </p>
+
+            <ul class="sidebar-links">
+                <li>
+                    <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+                        <img src="/assets/discord.png" alt="discord icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <img src="/assets/facebook.png" alt="facebook icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                        <img src="/assets/youtube.png" alt="youtube icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <img src="/assets/linkedin.png" alt="linkedin icon">
+                    </a>
+                </li>
+            </ul>
+
+        </aside>
+
+        <article class="article-body">
+
+            <section class="section-employment">
+                <h2>Section title 1</h2>
+                <ul>
+                    <li>
+                        <h3>Employment 1</h3>
+                        <span>
+                            <time datetime="1978">1978</time>
+                            -
+                            <time datetime="1980">1980</time>
+                        </span>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's
+                            standard dummy text ever since 1966, when designers at
+                            Letraset and James Mosley, the librarian at St Bride Printing
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Employment 2</h3>
+                        <span>
+                            <time datetime="1965">1965</time>
+                            -
+                            <time datetime="1978">1978</time>
+                        </span>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's
+                            standard dummy text ever since 1966, when designers at
+                            Letraset and James Mosley, the librarian at St Bride Printing
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Employment 3</h3>
+                        <span>
+                            <time datetime="1945">1945</time>
+                            -
+                            <time datetime="1963">1963</time>
+                        </span>
+                        <p>Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's
+                            standard dummy text ever since 1966, when designers at
+                            Letraset and James Mosley, the librarian at St Bride Printing
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="section-project">
+                <h2>Section title 2 Projects</h2>
+                <div class="section-project">
+                    <article class="project">
+                        <!-- Maybe CSS background or IMG tag -->
+                        <h3>Project title</h3>
+                        <p>Project description</p>
+                        <a href="http://">Project link</a>
+                    </article>
+                    <article class="project">
+                        <!-- Maybe CSS background or IMG tag -->
+                        <h3>Project title</h3>
+                        <p>Project description</p>
+                        <a href="http://">Project link</a>
+                    </article>
+                    <article class="project">
+                        <!-- Maybe CSS background or IMG tag -->
+                        <h3>Project title</h3>
+                        <p>Project description</p>
+                        <a href="http://">Project link</a>
+                    </article>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer>Hello I am Footer</footer>
+</body>
+
+</html>
